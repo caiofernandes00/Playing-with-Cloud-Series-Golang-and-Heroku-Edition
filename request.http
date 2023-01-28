@@ -1,0 +1,11 @@
+#########################################################
+### GET /health (local)
+curl -X GET https://localhost:8443/health
+### GET /bad_request_error (local)
+curl -X GET https://localhost:8443/hello
+
+#########################################################
+### GET /health (HEROKU)
+curl -X GET https://localhost:8443/health
+### GET /bad_request_error (HEROKU)
+curl -X GET https://localhost:8443/hello

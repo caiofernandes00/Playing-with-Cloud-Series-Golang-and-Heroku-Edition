@@ -1,0 +1,19 @@
+version: '3.8'
+
+services:
+  app:
+    build:
+      context: .
+      dockerfile: Dockerfile
+    container_name: cloud-series-golang-and-heroku-edition-app
+    volumes:
+      - ./src:/app/src
+    ports:
+      - 8443:8443
+    environment:
+      - PORT=8443
+    healthcheck:
+      test: ["CMD", "curl", "-f", "http://localhost:8080/health"]
+      interval: 10s
+      timeout: 5s
+      retries: 5
