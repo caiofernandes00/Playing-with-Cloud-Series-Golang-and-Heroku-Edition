@@ -1,4 +1,4 @@
-module cloud-series-golang-and-heroku-edition
+module Template-Golang-Heroku
 
 go 1.19
 
